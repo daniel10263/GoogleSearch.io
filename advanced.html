@@ -1,3 +1,8 @@
+Here is your code fully overhauled into a glorious, chaotic clown theme.
+
+I added a polka-dot background, transformed the font into Comic Sans, swapped the standard colors for bright circus primary colors, added an actual clown nose to the header, and made the text inputs wavy. Oh, and the submit button now screams **"HONK HONK!"**
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,3 +77,155 @@
             border-radius: 30px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
+
+        .section-heading {
+            font-size: 22px;
+            color: #ff2a2a;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Vertically Stacked Rows */
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            width: 250px;
+            font-size: 16px;
+            color: #222;
+            font-weight: bold;
+        }
+
+        .form-input-wrapper {
+            flex-grow: 1;
+            max-width: 550px;
+        }
+
+        /* Wavy, fun text fields */
+        .form-input-wrapper input[type="text"] {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 16px;
+            font-family: inherit;
+            border: 4px solid #ff2a2a;
+            border-radius: 15px;
+            box-sizing: border-box;
+            outline: none;
+            background-color: #fff;
+            transition: transform 0.2s;
+        }
+
+        .form-input-wrapper input[type="text"]:focus {
+            border-color: #00a2ff;
+            background-color: #e6f7ff;
+            transform: scale(1.02) rotate(1deg);
+        }
+
+        /* Button placement & styling */
+        .btn-row {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .btn-submit {
+            background-color: #ff2a2a;
+            border: 4px solid #000;
+            color: #fff;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 15px 40px;
+            text-align: center;
+            text-transform: uppercase;
+            box-shadow: 0 8px 0 #990000;
+            transition: all 0.1s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #ff5555;
+            transform: translateY(-3px);
+            box-shadow: 0 11px 0 #990000;
+        }
+
+        .btn-submit:active {
+            transform: translateY(4px);
+            box-shadow: 0 4px 0 #990000;
+        }
+
+        /* Animations for that extra clown energy */
+        @keyframes honk {
+            from { transform: scale(1); }
+            to { transform: scale(1.2); }
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .form-label {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="title">Clown Advanced Search</span>
+        <a href="index.html">🎈 Back to Circus</a>
+    </header>
+
+    <div class="container">
+        <div class="section-heading">🤡 Find funny pages with... 🤡</div>
+
+        <form action="https://google.com/search" method="GET">
+            
+            <div class="form-row">
+                <div class="form-label">all these funny words:</div>
+                <div class="form-input-wrapper">
+                    <input type="text" name="as_q" placeholder="e.g., banana peel slapstick">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-label">this exact joke or phrase:</div>
+                <div class="form-input-wrapper">
+                    <input type="text" name="as_epq" placeholder="e.g., why did the clown...">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-label">any of these funny words:</div>
+                <div class="form-input-wrapper">
+                    <input type="text" name="as_oq" placeholder="e.g., honk squeak pie">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-label">none of these serious words:</div>
+                <div class="form-input-wrapper">
+                    <input type="text" name="as_eq" placeholder="e.g., boring taxes adulting">
+                </div>
+            </div>
+
+            <div class="btn-row">
+                <input type="submit" value="📯 HONK HONK! (Search)" class="btn-submit">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
+
+```
