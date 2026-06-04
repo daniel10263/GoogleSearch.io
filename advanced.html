@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Advanced Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+
+        /* Top Header Area */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            border-bottom: 1px solid #ebebeb;
+        }
+
+        .title {
+            color: #d93025;
+            font-size: 20px;
+        }
+
+        header a {
+            text-decoration: none;
+            color: rgba(0,0,0,0.87);
+            font-size: 13px;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        /* Content Structure */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 30px;
+        }
+
+        .section-heading {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* Vertically Stacked Rows */
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            width: 250px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .form-input-wrapper {
+            flex-grow: 1;
+            max-width: 550px;
+        }
+
+        .form-input-wrapper input[type="text"] {
+            width: 100%;
+            padding: 6px 8px;
+            font-size: 13px;
+            border: 1px solid #d9d9d9;
+            border-radius: 1px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .form-input-wrapper input[type="text"]:focus {
+            border: 1px solid #4d90fe;
+        }
+
+        /* Button placement & styling */
+        .btn-row {
+            display: flex;
+            margin-top: 30px;
+        }
+
+        .btn-spacer {
+            width: 250px;
+        }
+
+        .btn-submit {
+            background-color: #4d90fe;
+            background-image: linear-gradient(top,#4d90fe,#4787ed);
+            border: 1px solid #3079ed;
+            color: #fff;
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 8px 16px;
+            text-align: center;
+        }
+
+        .btn-submit:hover {
+            background-color: #357ae8;
+            border: 1px solid #2f5bb7;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="title">Advanced Search</span>
+        <a href="index.html">Google Search</a>
+    </header>
+
+    <div class="container">
+        <div class="section-heading">Find pages with...</div>
+
+        <form action="https://google.com/search" method="GET">
+            
+            <div class="form-row">
+                <div class="form-label">all these words:</div>
+                <div class="form-input-wrapper">
+                    <input type="text" name="as_q">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-label">this exact word or phrase:</div>
+                <div class="form-input-wrapper">
+                    <input type="text" name="as_epq">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-label">any of these words:</div>
+                <div class="form-input-wrapper">
+                    <input type="text" name="as_oq">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-label">none of these words:</div>
+                <div class="form-input-wrapper">
+                    <input type="text" name="as_eq">
+                </div>
+            </div>
+
+            <div class="btn-row">
+                <div class="btn-spacer"></div>
+                <div>
+                    <input type="submit" value="Advanced Search" class="btn-submit">
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
